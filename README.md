@@ -41,7 +41,7 @@ Comments begin with a `;` and are terminated by newline.
 ## Operators ##
 
 * `expr1 plus expr2` mod 256 addition. Both operands will be coerced to `int`
-* `expr1 minus expr2` mod 256 subtration. Both operands will be coerced to `int`
+* `expr1 minus expr2` mod 256 subtraction. Both operands will be coerced to `int`
 * `expr1 expr2 ...` string concatenation. All operands will be coerced to `str`
 
 * `expr1 and expr2` if `expr1` is truthy return `expr2`, otherwise return `expr1`
@@ -105,7 +105,7 @@ else
 ]
 ```
 
-The brackets of the `if` and `else` clauses correspond to exactly the same control structures in brainfuck code, which is the point of annotation.
+The brackets of the `if` and `else` clauses correspond to exactly the same control structures in brainfuck code, which is the point of the annotation.
 
 It's also possible to write `if` and `while` statements without brackets, however each clause must be kept on a single line like this:
 
