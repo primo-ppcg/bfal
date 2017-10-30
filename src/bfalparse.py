@@ -111,7 +111,8 @@ def p_bfcode_statement(p):
 def p_variable(p):
   '''variable : ID'''
   if p[1] in constants:
-    pass
+    sys.stderr.write('Illegal assignment to constant %r on line %d\n' % (p[1], p.lineno(1)))
+    sys.exit(1)
   else:
     p[0] = p[1]
 
