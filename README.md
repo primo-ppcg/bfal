@@ -3,6 +3,8 @@
 
 The purpose of bfal is to aid in development and annotation of brainfuck programs. Requires the [PLY](https://pypi.python.org/pypi/ply) (Python Lex & Yacc) library.
 
+bfal is an interpreter for a specific type of annotation of brainfuck code, largely resembling C. The idea is to be able to create a working logical framework for your code, confirm that is correct, and then add functional brainfuck code that matches the annotation. The bfal code will remain valid throughout the process. It is recommended to be used with a debugging brainfuck interpreter, that allows execution to halt a arbitrary breakpoints.
+
 ## Data Types ##
 
 bfal supports two data types: 8-bit unsigned integers, and strings (kept internally as bytearrays). Strings may delimited with either single or double quotes; escape sequences will be interpretted in either.
