@@ -111,9 +111,15 @@ def p_bfcode_statement(p):
 def p_variable(p):
   '''variable : ID'''
   if p[1] in constants:
-    p.parser.error = 1
+    raise SyntaxError
   else:
     p[0] = p[1]
+
+
+def p_variable(p):
+  '''variable : error'''
+  sys.stderr.write('Cannot assign to constant %r on line %d\n' % (p[1], p.lineno(1)))
+  sys.exit(1)
 
 
 def p_expr_list1(p):
