@@ -3,11 +3,11 @@
 
 The purpose of bfal is to aid in development and annotation of brainfuck programs. Requires the [PLY](https://pypi.python.org/pypi/ply) (Python Lex & Yacc) library.
 
-bfal is an interpreter for a specific type of annotation of brainfuck code, largely resembling C. The idea is to be able to create a working logical framework for your code, confirm that it is correct, and then add functional brainfuck code that matches the annotation. The bfal code will remain valid throughout the process. It is recommended to be used with a debugging brainfuck interpreter, that allows execution to halt a arbitrary breakpoints.
+bfal is an interpreter for a specific type of annotation of brainfuck code, largely resembling C. The idea is to be able to create a working logical framework for your code, confirm that it is correct, and then add functional brainfuck code that matches the annotation. The bfal code will remain valid throughout the process. It is recommended to be used with a debugging brainfuck interpreter, that allows execution to halt at arbitrary breakpoints.
 
 ## Data Types ##
 
-bfal supports two data types: 8-bit unsigned integers, and strings (kept internally as bytearrays). Strings may delimited with either single or double quotes; escape sequences will be interpretted in either.
+bfal supports two data types: 8-bit unsigned integers, and strings (kept internally as bytearrays). Strings may delimited with either single or double quotes; escape sequences will be interpreted in either.
 
 The following characters are forbidden in any strings or comments, mainly to prevent any accidental insertion of brainfuck instructions:
 
@@ -32,7 +32,7 @@ The first 8 are brainfuck instructions, and the last three are often used by deb
 
 **Constants**
 
-For convenience, and number of single character constants are defined, following the html entity with the same name:
+For convenience, a number of single character constants are defined, following the html entity with the same name:
 
 `tab`, `newline`, `space`, `excl`, `quot`, `num`, `dollar`, `percnt`, `amp`, `apos`, `lpar`, `rpar`, `ast`, `plus`, `comma`, `minus`, `period`, `sol`, `colon`, `semi`, `lt`, `equals`, `gt`, `quest`, `commat`, `lbrack`, `bsol`, `rbrack`, `hat`, `lowbar`, `grave`, `lbrace`, `vert`, `rbrace`, `tilde`
 
